@@ -9,9 +9,96 @@
     <title>Chating</title>
 </head>
 <body>
-
     
+    <div class="d-flex justify-content-center" id="loader">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    
+    <section class="d-none" id="mainarea">
+        <div class="hero">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 center-v-content">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">Ingresar</div>
+                                <!-- Formulario -->
+                                <form action="">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="user" name="user" placeholder="Nombre de usuario">
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="newuser">
+                                        <label class="form-check-label text-muted" for="newuser">Registrar un nuevo usuario</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary float-right">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Mensajes -->
+        <div class="container conte-messages">
+            <div class="row mt-4 mb-4 justify-content-center">
+                <div class="col-md-9">
+                    <div class="card conten-h">
+                        <div class="card-body">
+                            <div id="messages">
+                                <ul class="list-unstyled">
+                                    <li class="media alert alert-secondary">
+                                        <div class="media-body">
+                                        <h5 class="mt-0 mb-1 font-weight-bold">User name</h5>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li class="media alert alert-secondary">
+                                        <div class="media-body">
+                                        <h5 class="mt-0 mb-1 font-weight-bold">User name</h5>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li class="media alert alert-secondary">
+                                        <div class="media-body">
+                                        <h5 class="mt-0 mb-1 font-weight-bold">User name</h5>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li class="media alert alert-secondary">
+                                        <div class="media-body">
+                                        <h5 class="mt-0 mb-1 font-weight-bold">User name</h5>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="message" class="mt-2">
+                                <form action="">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="messasend" name="messasend" placeholder="Escriba el mensaje...">
+                                    </div>
+                                    <button type="submit" class="btn btn-secondary btn-lg float-right">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="./js/jquery.js"></script>
     <script src="./js/bootstrap.js"></script>

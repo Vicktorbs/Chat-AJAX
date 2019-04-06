@@ -1,0 +1,22 @@
+.hero {
+    height: 100vh;
+    background-image: url("../img/hero04.png");
+    background-size: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.center-v-content {
+    margin-top: 28vh;
+}
+body {
+    background: #dada;
+}
+#messages {
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+#loader {
+    height: 100vh;
+    padding-top: 34vh;
+}
