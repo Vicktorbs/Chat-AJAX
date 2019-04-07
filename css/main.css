@@ -12,9 +12,25 @@
 body {
     background: #dada;
 }
-#messages {
-    max-height: 70vh;
+/* Mensages */
+#messageslist {
+    height: 70vh;
     overflow-y: scroll;
+}
+#messageslist::-webkit-scrollbar{
+    display: none;
+}
+#messageslist::-webkit-scrollbar-thumb{
+    display: none;
+}
+/* Body */
+body::-webkit-scrollbar{
+    width: 7px;
+    background: rgba(0, 184, 228, .2)
+}
+body::-webkit-scrollbar-thumb{
+    background: #F1DA53;
+    border-radius: 5px;
 }
 #loader {
     height: 100vh;
