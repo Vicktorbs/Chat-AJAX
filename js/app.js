@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(showConten, 500)//1800
     registerUser();
 })
-
 function showConten() {
     let content = document.getElementById('mainarea')
     let loader = document.getElementById('loader')
@@ -37,7 +36,6 @@ function getMessages() {
                 document.getElementById('messageslist').innerHTML = messageTemplate
             });
         }
-        
         // document.getElementById('conten_text').innerHTML = xhr.responseText
     }
     xhr.send()
@@ -51,7 +49,7 @@ function registerUser() {
         let userName = document.getElementById('user').value
         let userStatus = document.getElementById('newuser').checked
         let userPassword = document.getElementById('password').value
-        console.log(userPassword);
+        // console.log(userPassword);
         params = 'user='+userName+'&&password='+userPassword+'&&status='+userStatus
 
         let xhr = new XMLHttpRequest();
@@ -70,7 +68,10 @@ function registerUser() {
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhr.onreadystatechange = function() {
                 if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-                    console.log(xhr.responseText);
+                    // console.log(xhr.responseText);
+                    let userData = JSON.parse(xhr.responseText)
+                    let user_log = userData[0].name
+                    sendMessage(user_log)
                     let messageSection = document.getElementById('messagesSection')
                     let logSection = document.getElementById('logSection')
                     messageSection.classList.remove('d-none')
@@ -82,5 +83,25 @@ function registerUser() {
         }
         user.reset()
     })
-    
+}
+
+function sendMessage(userloged) {
+    let params
+    let newMessage = document.getElementById('newMessage')
+    newMessage.addEventListener('submit', (e) => {
+        e.preventDefault()
+        let message = document.getElementById('messasend').value
+        params = 'userM='+userloged+'&&contM='+message
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', 'php/sendMessage.php', true)
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function() {
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                console.log(xhr.responseText);
+                getMessages()
+            }
+        }
+        xhr.send(params);
+    })
+    newMessage.reset()
 }
