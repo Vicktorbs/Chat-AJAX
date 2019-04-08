@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(showConten, 500)//1800
+    setTimeout(showConten, 1000)//1800
     registerUser();
 })
+setInterval(getMessages,500)
 function showConten() {
     let content = document.getElementById('mainarea')
     let loader = document.getElementById('loader')
@@ -33,7 +34,8 @@ function getMessages() {
                     </li>
                 </ul>
                 `
-                document.getElementById('messageslist').innerHTML = messageTemplate
+                let messageList = document.getElementById('messageslist')
+                messageList.innerHTML = messageTemplate
             });
         }
         // document.getElementById('conten_text').innerHTML = xhr.responseText
