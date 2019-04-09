@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(showConten, 1000)//1800
     registerUser();
 })
-setInterval(getMessages,500)
+// setInterval(getMessages,500)
 function showConten() {
     let content = document.getElementById('mainarea')
     let loader = document.getElementById('loader')
